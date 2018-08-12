@@ -23,8 +23,8 @@ class Application:
         self.james = JamesHelper(self)
         self.config = config
         self.signup = SignupHelper
-        self.mail = MailHelper
-        self.sosp = SoapHelper
+        self.mail = MailHelper(self)
+        self.soap = SoapHelper(self)
         self.base_url = config['web']['baseUrl']
 
     def is_valid(self):

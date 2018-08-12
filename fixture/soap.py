@@ -1,7 +1,7 @@
 from suds.client import Client
 from suds import WebFault
 
-5class SoapHelper:
+class SoapHelper:
 
     def __init__(self, app):
         self.app = app
