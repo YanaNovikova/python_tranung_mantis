@@ -1,6 +1,7 @@
 from suds.client import Client
 from suds import WebFault
 
+
 class SoapHelper:
 
     def __init__(self, app):
@@ -13,3 +14,13 @@ class SoapHelper:
             return True
         except WebFault:
             return False
+
+    def can_list(self, username, password):
+        client = Client("http://localhost:8080/mantisbt-1.2.20/api/soap/mantisconnect.php?wsdl")
+        try:
+            client.servise.mc_projects_get_user_accessible(username, password)
+            return True
+        except WebFault:
+            return False
+
+

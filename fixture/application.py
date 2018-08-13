@@ -22,7 +22,7 @@ class Application:
         self.project = ProjectHelper(self)
         self.james = JamesHelper(self)
         self.config = config
-        self.signup = SignupHelper
+        self.signup = SignupHelper(self)
         self.mail = MailHelper(self)
         self.soap = SoapHelper(self)
         self.base_url = config['web']['baseUrl']
